@@ -1,0 +1,8 @@
+<div class="ls-topbar">
+  <span class="ls-show-sidebar ls-ico-menu"></span>
+
+  <!-- Nome do produto/marca -->
+  <%- unless current_page.data.show_topbar_title %>
+    <h1 class="ls-brand-name"><a href="<%= base_url %>/documentacao/exemplos/painel1/home" class="ls-ico-earth"><%=  current_page.data.title_product %></a></h1>
+  <% end %>
+</div>
