@@ -2,10 +2,17 @@
 title: Página do cliente
 layout: panel
 theme_name: ls-theme-gold
+alias: sp
+user: MaisWeb São Paulo
 title_product: Revenda do Email Marketing
 ---
 
 <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
+
+<div class="ls-alert-success ls-dismissable">
+  <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+  <p>Cliente criado com sucesso.</p>
+</div>
 
 <div class="ls-box">
   <div class="ls-float-right ls-regroup">
@@ -26,11 +33,11 @@ title_product: Revenda do Email Marketing
     <fieldset id="domain-form" class="ls-form-disable ls-form-text">
       <label class="ls-label col-md-6 col-lg-8">
         <b class="ls-label-text">Nome</b>
-        <input type="text" value="Fulano de tal" required>
+        <input type="text" value="João Moura" required>
       </label>
       <label class="ls-label col-md-6 col-lg-8">
         <b class="ls-label-text">login/E-mail:</b>
-        <input type="text" value="emaildocliente@cliente.com.br" required>
+        <input type="text" value="joao@moura.com.br" required>
       </label>
       <label class="ls-label col-md-6 col-lg-8">
         <b class="ls-label-text">Status:</b>
@@ -38,11 +45,7 @@ title_product: Revenda do Email Marketing
       </label>
       <label class="ls-label col-md-6 col-lg-8">
         <b class="ls-label-text">Data de cadastro:</b>
-        <input type="text" value="18/05/1987" required>
-      </label>
-      <label class="ls-label col-md-6 col-lg-8">
-        <b class="ls-label-text">Informações:</b>
-        <textarea name="" id="" cols="30" rows="5">com Fulano de Tal no telefone: 11 5555-5555. Horários entre 12:00 e 16:00 dias úteis.</textarea>
+        <input type="text" value="18/05/2014" required>
       </label>
     </fieldset>
     <div class="domain-actions ls-display-none">
@@ -73,9 +76,8 @@ title_product: Revenda do Email Marketing
 
     <div class="col-md-3 col-sm-6">
       <div class="ls-box">
-        <strong class="ls-board-info">9 <small>milhões</small></strong>
-        <small>Válido até 01/01/2014</small>
-        <a href="#" class="ls-btn-sm ls-btn">Comprar mais envios</a>
+        <strong class="ls-board-info">1000</strong>
+        <small>Válido até 01/12/2014</small>
       </div>
     </div>
 
@@ -96,7 +98,7 @@ title_product: Revenda do Email Marketing
     <div class="col-md-3 col-sm-6">
       <div class="ls-box">
         <h6 class="ls-title-4 color-default">Utilizados</h6>
-        <strong class="ls-board-info">10.743</strong>
+        <strong class="ls-board-info">0</strong>
       </div>
     </div>
 
@@ -121,8 +123,8 @@ title_product: Revenda do Email Marketing
 
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
-        <strong class="ls-board-info">9 <small>milhões</small></strong>
-        <small>Válido até 01/01/2014</small>
+        <strong class="ls-board-info">1000</strong>
+        <small>Válido até 01/12/2014</small>
       </div>
     </div>
 
@@ -162,96 +164,23 @@ title_product: Revenda do Email Marketing
       <div id="tab1" class="ls-tab-content ls-active">
 
         <div class="ls-tab-content child1 ls-active">
-          <p>Contratação x uso</p>
-          <div id="panel-charts"></div>
+          <div id="panel-charts-new"></div>
         </div>
 
         <div class="ls-tab-content child2">
 
-          <table class="ls-table">
-            <thead>
-              <tr>
-                <th class="ls-txt-center hidden-xs">Período</th>
-                <th class="ls-txt-center">Contratados</th>
-                <th class="ls-txt-center" colspan="2">Distribuídos</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-                  <td class="ls-txt-center">1000000</td>
-                  <td class="ls-txt-center">10741</td>
-                  <td class="ls-txt-center">1%</td>
-                </tr>
-                <tr>
-                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-                  <td class="ls-txt-center">1000000</td>
-                  <td class="ls-txt-center">10741</td>
-                  <td class="ls-txt-center">1%</td>
-                </tr>
-                <tr>
-                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-                  <td class="ls-txt-center">1000000</td>
-                  <td class="ls-txt-center">10741</td>
-                  <td class="ls-txt-center">1%</td>
-                </tr>
-                <tr>
-                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-                  <td class="ls-txt-center">1000000</td>
-                  <td class="ls-txt-center">10741</td>
-                  <td class="ls-txt-center">1%</td>
-                </tr>
-                <tr>
-                  <td class="ls-txt-center hidden-xs">28/03/2014 a 27/04/2014</td>
-                  <td class="ls-txt-center">1000000</td>
-                  <td class="ls-txt-center">10741</td>
-                  <td class="ls-txt-center">1%</td>
-                </tr>
-            </tbody>
-          </table>
+          <h2 class="ls-title-5 ls-txt-center">Não existe dados</h2>
+
         </div>
       </div>
       <div id="tab2" class="ls-tab-content">
 
         <div class="ls-tab-content child1 ls-active">
-          <p>Estatísticas de envios</p>
-          <div id="panel-charts-client"></div>
+          <div id="panel-charts-2-new"></div>
         </div>
 
         <div class="ls-tab-content child2">
-          <table class="ls-table">
-            <thead>
-              <tr>
-                <th class="ls-txt-center">Data</th>
-                <th class="ls-txt-center">Todos</th>
-                <th class="ls-txt-center" colspan="2">Ativos</th>
-                <th class="ls-txt-center hidden-xs" colspan="2">Desativados</th>
-                <th class="ls-txt-center hidden-xs" colspan="2">Bloqueados por bounce</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="ls-txt-center">Hoje</td>
-                <td class="ls-txt-center">29</td>
-                <td class="ls-txt-center">26</td>
-                <td class="ls-txt-center hidden-xs">89%</td>
-                <td class="ls-txt-center hidden-xs">3</td>
-                <td class="ls-txt-center hidden-xs">10%</td>
-                <td class="ls-txt-center hidden-xs">0</td>
-                <td class="ls-txt-center hidden-xs">0%</td>
-              </tr>
-              <tr>
-                <td class="ls-txt-center">Hoje</td>
-                <td class="ls-txt-center">29</td>
-                <td class="ls-txt-center">26</td>
-                <td class="ls-txt-center hidden-xs">89%</td>
-                <td class="ls-txt-center hidden-xs">3</td>
-                <td class="ls-txt-center hidden-xs">10%</td>
-                <td class="ls-txt-center hidden-xs">0</td>
-                <td class="ls-txt-center hidden-xs">0%</td>
-              </tr>
-            </tbody>
-          </table>
+           <h2 class="ls-title-5 ls-txt-center">Não existe dados</h2>
         </div>
       </div>
     </div>
@@ -289,32 +218,8 @@ title_product: Revenda do Email Marketing
     <tr>
       <td>Crédito envios mensais</td>
       <td>Crédito</td>
-      <td>10.000</td>
-      <td class="hidden-xs">01/01/2012 - 15h00</td>
-    </tr>
-    <tr>
-      <td>Crédito envios mensais</td>
-      <td>Crédito</td>
-      <td>10.000</td>
-      <td class="hidden-xs">01/01/2012 - 15h00</td>
-    </tr>
-    <tr>
-      <td>Crédito envios mensais</td>
-      <td>Crédito</td>
-      <td>10.000</td>
-      <td class="hidden-xs">01/01/2012 - 15h00</td>
-    </tr>
-    <tr>
-      <td>Crédito envios mensais</td>
-      <td>Crédito</td>
-      <td>10.000</td>
-      <td class="hidden-xs">01/01/2012 - 15h00</td>
-    </tr>
-    <tr>
-      <td>Crédito envios mensais</td>
-      <td>Crédito</td>
-      <td>10.000</td>
-      <td class="hidden-xs">01/01/2012 - 15h00</td>
+      <td>1000</td>
+      <td class="hidden-xs">18/05/2014 - 15h00</td>
     </tr>
   </tbody>
 </table>
@@ -440,7 +345,3 @@ title_product: Revenda do Email Marketing
     </div>
   </form>
 </div>
-
-<% content_for :sidebar_panel do %>
-  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
-<% end %>

@@ -3,6 +3,8 @@ title: Página Inicial
 html_class: ls-html-nobg
 layout: panel
 theme_name: ls-theme-gold
+alias: sp
+user: MaisWeb São Paulo
 title_product: Revenda do Email Marketing
 ---
 
@@ -57,7 +59,7 @@ title_product: Revenda do Email Marketing
 
 </div>
 
-<h2 class="ls-title-3">Clientes que mais contrataram <a href="#" class="ls-btn ls-btn-sm ls-float-right ls-float-none-sm">Ver mais relatórios</a></h2>
+<h2 class="ls-title-3">Clientes que mais contrataram <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/stats" class="ls-btn ls-btn-sm ls-float-right ls-float-none-sm">Ver mais relatórios</a></h2>
 <div class="ls-box">
   <div id="panel-charts"></div>
 </div>
@@ -122,6 +124,3 @@ title_product: Revenda do Email Marketing
   </div>
 </div>
 
-<% content_for :sidebar_panel do %>
-  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
-<% end %>

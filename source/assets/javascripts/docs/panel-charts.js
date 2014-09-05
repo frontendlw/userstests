@@ -31,6 +31,67 @@ $(function () {
     }]
   });
 
+  $('#panel-charts-new').highcharts({
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Setembro/2014'
+    },
+    xAxis: {
+      categories: ['Joana', 'Marcela', 'Patricia', 'Diego']
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Envios'
+      }
+    },
+    credits: {
+      text: 'Locaweb',
+      href: 'http://www.locaweb.com.br',
+      style: {
+        display: 'none'
+      }
+    },
+    colors: ['#bdaa38', '#aa4643 ','#89a54e'],
+    series: [{
+      name: 'Total de envios contratados',
+      data: [0, 0, 0, 0]
+    }]
+  });
+
+    $('#panel-charts-2-new').highcharts({
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'Setembro/2014'
+      },
+      xAxis: {
+        categories: ['Joana', 'Marcela', 'Patricia', 'Diego']
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Envios'
+        }
+      },
+      credits: {
+        text: 'Locaweb',
+        href: 'http://www.locaweb.com.br',
+        style: {
+          display: 'none'
+        }
+      },
+      colors: ['#bdaa38', '#aa4643 ','#89a54e'],
+      series: [{
+        name: 'Total de envios contratados',
+        data: [0, 0, 0, 0]
+      }]
+    });
+
+
   $('#panel-charts-client').highcharts({
 
     chart: {

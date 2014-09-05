@@ -1,0 +1,115 @@
+---
+title: Lista de clientes
+layout: panel
+theme_name: ls-theme-gold
+alias: sp
+user: MaisWeb São Paulo
+title_product: Revenda do Email Marketing
+---
+
+<h1 class="ls-title-intro ls-ico-users">Clientes</h1>
+
+
+<a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/new-client" class="ls-btn-primary">Cadastrar novo</a>
+
+<div class="ls-box-filter">
+  <form action="#" class="ls-form ls-form-inline ls-float-left">
+    <label class="ls-label">
+        <b class="ls-label-text">Status</b>
+        <div data-ls-module="customFields" class="ls-field-sm">
+          <select name="">
+            <option value="">Todos</option>
+            <option value="">Ativo</option>
+            <option value="">Desativados</option>
+            <option value="">Bloqueados por bounce</option>
+          </select>
+        </div>
+      </label>
+  </form>
+  <form action="#" class="ls-form ls-form-inline ls-float-right">
+    <label class="ls-label">
+      <b class="ls-label-text ls-hidden-accessible">Nome do cliente</b>
+      <input type="text" name="nome" placeholder="Nome e sobrenome" required class="ls-field-sm">
+    </label>
+    <div class="ls-actions-btn">
+      <button type="submit" class="ls-btn ls-btn-sm">Buscar</button>
+    </div>
+  </form>
+</div>
+
+<table class="ls-table">
+  <thead>
+    <tr>
+      <th>Nome do cliente</th>
+      <th class="ls-txt-center hidden-xs">Status</th>
+      <th class="ls-txt-center">Envios disponíveis</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client">Arnaldo Medeiros</a>
+      </td>
+      <td class="ls-txt-center hidden-xs">Ativo</td>
+      <td class="ls-txt-center">
+        500.000
+        <small class="ls-display-block">até 01/12/2014</small>
+      </td>
+      <td class="ls-txt-right ls-regroup">
+        <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client" class="ls-btn ls-btn-sm">Administrar</a>
+        <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+          <a href="#" class="ls-btn ls-btn-sm"></a>
+          <ul class="ls-dropdown-nav">
+            <li><a href="#">Desativar</a></li>
+            <li><a href="#" class="ls-color-danger">Excluir</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client">Bruna Maia</a>
+          <span class='ls-tag hidden-xs'>Não recorrente</span>
+      </td>
+      <td class="ls-txt-center hidden-xs">Ativo</td>
+      <td class="ls-txt-center">
+        10.000
+        <small class="ls-display-block">até 10/11/2014</small>
+      </td>
+      <td class="ls-txt-right ls-regroup">
+        <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client" class="ls-btn ls-btn-sm">Administrar</a>
+        <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+          <a href="#" class="ls-btn ls-btn-sm"></a>
+          <ul class="ls-dropdown-nav">
+            <li><a href="#">Desativar</a></li>
+            <li><a href="#" class="ls-color-danger">Excluir</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client">Roberto Rodrigues Faria </a>
+          <span class='ls-tag hidden-xs'>Não recorrente</span>
+      </td>
+      <td class="ls-txt-center hidden-xs">Ativo</td>
+      <td class="ls-txt-center">
+        35.000
+        <small class="ls-display-block">até 01/12/2014</small>
+      </td>
+      <td class="ls-txt-right ls-regroup">
+        <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client" class="ls-btn ls-btn-sm">Administrar</a>
+        <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
+          <a href="#" class="ls-btn ls-btn-sm"></a>
+          <ul class="ls-dropdown-nav">
+            <li><a href="#">Desativar</a></li>
+            <li><a href="#" class="ls-color-danger">Excluir</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+

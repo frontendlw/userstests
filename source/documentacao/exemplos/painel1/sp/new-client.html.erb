@@ -2,12 +2,14 @@
 title: Cadastrar cliente
 layout: panel
 theme_name: ls-theme-gold
+alias: sp
+user: MaisWeb São Paulo
 title_product: Revenda do Email Marketing
 ---
 
 <h1 class="ls-title-intro ls-ico-users">Cadastrar cliente</h1>
 
-<form action="<%= base_url %>/documentacao/exemplos/painel1/client" class="ls-form">
+<form action="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client_new" class="ls-form">
   <legend class="ls-title-2">Identificação</legend>
   <div class="row">
     <label class="ls-label col-md-6">
@@ -47,7 +49,7 @@ title_product: Revenda do Email Marketing
     <div class="row">
       <label class="ls-label col-md-6">
         <span class="ls-label-text">Saldo disponível</span>
-        <input type="text" name="total-value" value="100.000" readonly>
+        <p>100.000</p>
       </label>
       <label class="ls-label col-md-6">
         <span class="ls-label-text">Quantidade de envios à adicionar</span>
@@ -63,9 +65,6 @@ title_product: Revenda do Email Marketing
   <p>Os envios têm data de expiração de 30 dias a partir da data que foram creditados.</p>
   <hr>
   <button type="submit" class="ls-btn-primary">Salvar</button>
-  <a href="<%= base_url %>/documentacao/exemplos/painel1/no-clients" class="ls-btn">Cancelar</a>
+  <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/clients" class="ls-btn">Cancelar</a>
 </form>
 
-<% content_for :sidebar_panel do %>
-  <%= partial 'documentacao/exemplos/painel1/sidebar' %>
-<% end %>
