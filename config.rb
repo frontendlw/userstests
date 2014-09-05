@@ -79,23 +79,26 @@ set :images_dir, 'assets/images'
 
 activate :directory_indexes
 
+
 # Build-specific configuration
+
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+
+  activate :minify_html
 
   # Enable cache buster
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
+  set :relative_links, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
-
-    # base url for gh-pages
-  set :base_url, "/locawebstyle"
+  set :base_url, "/usertests"
 end
