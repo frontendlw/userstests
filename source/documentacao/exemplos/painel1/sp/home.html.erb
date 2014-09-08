@@ -77,16 +77,16 @@ title_product: Revenda do Email Marketing
         </thead>
         <tbody>
           <tr>
-            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/client">João da Silva</a> </td>
-            <td>10.04.2014</td>
+            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client">Arnaldo Medeiros</a> </td>
+            <td>31.10.2014</td>
           </tr>
           <tr>
-            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/client">João da Silva</a> </td>
-            <td>10.04.2014</td>
+            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client">Bruna Maia</a> </td>
+            <td>31.12.2014</td>
           </tr>
           <tr>
-            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/client">João da Silva</a> </td>
-            <td>10.04.2014</td>
+            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/client">Roberto Rodrigues Faria</a> </td>
+            <td>31.09.2014</td>
           </tr>
         </tbody>
       </table>
@@ -98,24 +98,9 @@ title_product: Revenda do Email Marketing
 
   </div>
   <div class="col-md-6">
-    <h2 class="ls-title-3">Clientes bloqueados por bounce <a href="<%= base_url %>/documentacao/exemplos/painel1/clients" class="ls-btn ls-btn-sm ls-float-right ls-float-none-sm">Ver todos</a></h2>
-    <div class="ls-box">
-      <table class="ls-table">
-        <thead>
-          <th>Nome do cliente</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/client">João da Silva</a> </td>
-          </tr>
-          <tr>
-            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/client">João da Silva</a> </td>
-          </tr>
-          <tr>
-            <td><a href="<%= base_url %>/documentacao/exemplos/painel1/client">João da Silva</a> </td>
-          </tr>
-        </tbody>
-      </table>
+    <h2 class="ls-title-3">Clientes bloqueados por bounce <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/clients" class="ls-btn ls-btn-sm ls-float-right ls-float-none-sm">Ver todos</a></h2>
+    <div class="ls-box" style="height: 237px; text-align: center;">
+      <p style="line-height: 200px;">Não existem clientes bloqueados por bounce.</p>
     </div>
 
     <div class="ls-box">

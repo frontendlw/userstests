@@ -9,6 +9,10 @@ title_product: Revenda do Email Marketing
 
 <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
 
+<div class="ls-alert ls-alert-success ls-dismissable" style="display: none;" id="feedbackDisabled">
+  <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+  <p>Cliente Paulo Gustavo desativado com sucesso!</p>
+</div>
 
 <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/new-client" class="ls-btn-primary">Cadastrar novo</a>
 
@@ -103,7 +107,7 @@ title_product: Revenda do Email Marketing
         <div data-ls-module="dropdown" class="ls-dropdown ls-pos-right">
           <a href="#" class="ls-btn ls-btn-sm"></a>
           <ul class="ls-dropdown-nav">
-            <li><a href="#">Desativar</a></li>
+            <li><a href="#" id="disabledClient">Desativar</a></li>
             <li><a href="#" class="ls-color-danger">Excluir</a></li>
           </ul>
         </div>

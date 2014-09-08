@@ -9,6 +9,16 @@ title_product: Revenda do Email Marketing
 
 <h1 class="ls-title-intro ls-ico-users">Clientes</h1>
 
+<div class="ls-alert ls-alert-success ls-dismissable" style="display: none;" id="feedbackDisabled">
+  <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+  <p>Cliente Paulo Gustavo desativado com sucesso!</p>
+</div>
+
+<div class="ls-alert ls-alert-success ls-dismissable" style="display: none;" id="feedbackLoose">
+  <span data-ls-module="dismiss" class="ls-dismiss">&times;</span>
+  <p>Foram adicionados <strong class="areaLoose"></strong> envios avulsos para esse cliente.</p>
+</div>
+
 <div class="ls-box">
   <div class="ls-float-right ls-regroup">
     <a href="" class="ls-btn-primary" target="_blank">Acessar o Painel</a>
@@ -19,7 +29,7 @@ title_product: Revenda do Email Marketing
           <a href="" data-ls-fields-enable="#domain-form" data-toggle-class="ls-display-none" data-target=".domain-actions" class="domain-actions">Editar</a>
         </li>
         <li><a href="#" data-ls-module="modal" data-target="#editPassword">Alterar senha</a></li>
-        <li><a href="#">Desativar</a></li>
+        <li><a href="#" id="disabledClient">Desativar</a></li>
       </ul>
     </div>
   </div>
@@ -83,13 +93,13 @@ title_product: Revenda do Email Marketing
     <div class="col-md-3 col-sm-6">
       <div class="ls-box">
         <h6 class="ls-title-4">Avulso</h6>
-        <strong class="ls-board-info">0</strong>
+        <strong class="ls-board-info areaLoose">0</strong>
       </div>
     </div>
 
     <div class="col-md-3 col-sm-6">
       <div class="ls-box">
-        <h6 class="ls-title-4">Distribuído</h6>
+        <h6 class="ls-title-4">Removidos</h6>
         <strong class="ls-board-info">0</strong>
       </div>
     </div>
@@ -350,7 +360,7 @@ title_product: Revenda do Email Marketing
 
 <!-- Modal Adicionar envios -->
 <div class="ls-modal" id="addMessage">
-  <form action="" class="ls-form">
+  <form action="#" class="ls-form">
     <div class="ls-modal-box">
       <div class="ls-modal-header">
         <button data-dismiss="modal">×</button>
@@ -365,11 +375,11 @@ title_product: Revenda do Email Marketing
         <hr>
         <label class="ls-label">
           <b class="ls-label-text">Quantidade de envios avulsos a adicionar</b>
-          <input type="number" name="" required>
+          <input type="number" name="" id="inputLoose" required>
         </label>
       </div>
       <div class="ls-modal-footer">
-        <button type="submit" class="ls-btn-primary">Adicionar</button>
+        <button type="button" id="addLoose" class="ls-btn-primary">Adicionar</button>
         <a class="ls-btn ls-float-right" data-dismiss="modal">Cancelar</a>
       </div>
     </div>
