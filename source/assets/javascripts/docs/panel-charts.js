@@ -1,37 +1,282 @@
 $(function () {
 
   // panel 1
-  $('#panel-charts').highcharts({
-    chart: {
-      type: 'column'
-    },
-    title: {
-      text: 'Agosto/2014'
-    },
-    xAxis: {
-      categories: ['Joana', 'Marcela', 'Patricia', 'Diego']
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: 'Envios'
-      }
-    },
-    credits: {
-      text: 'Locaweb',
-      href: 'http://www.locaweb.com.br',
-      style: {
-        display: 'none'
-      }
-    },
-    colors: ['#bdaa38', '#aa4643 ','#89a54e'],
-    series: [{
-      name: 'Total de envios contratados',
-      data: [25, 50, 20, 3]
-    }]
-  });
+  if ($('#panel-charts').length > 0){
 
-  $('#panel-charts-new').highcharts({
+    maximum_value = (parseInt(Math.max.apply(null, messages_chart_data.values[0].data) / 100) + 1) * 100 || 1
+
+    chart = new Highcharts.Chart({
+      chart: { renderTo: 'panel-charts', type: 'column' },
+      title: {
+        text: '',
+      },
+      colors: [
+        {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, 'rgb(189, 170, 56)'],
+            [1, 'rgb(155, 131, 23)']
+          ]
+        },
+        {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, '#b95451'],
+            [1, '#aa4643']
+          ]
+        }
+      ],
+      xAxis: {
+        categories: messages_chart_data.categories,
+        title: {
+          text: messages_chart_data.xAxisTitle,
+        }
+      },
+      yAxis: {
+        title: {
+          text: messages_chart_data.yAxisTitle,
+        },
+        min: 0,
+        max: maximum_value,
+        tickInterval: maximum_value / 10
+      },
+      tooltip: {
+        formatter: function() {
+            return "<strong>" + this.x + "</strong><br>" + this.series.name + ": " + Highcharts.numberFormat(this.y, 0, ",", ".")
+        }
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+        }
+      },
+      credits: {
+        text: 'Painel da Revenda',
+        href: '',
+        style: {
+          display: 'none'
+        }
+      },
+      series: messages_chart_data.values
+    })
+  }
+
+
+  var e, t;
+  $("#panel-charts-client").length > 0 && (t = (parseInt(Math.max.apply(null, accounts_chart_data.values[0].data) / 10) + 1) * 10 || 1, e = new Highcharts.Chart({
+      chart: {
+          renderTo: "panel-charts-client",
+          type: "column",
+          width: $("#panel-charts").width()
+      },
+      title: {
+          text: "",
+      },
+      colors: [
+      {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, 'rgb(189, 170, 56)'],
+            [1, 'rgb(155, 131, 23)']
+          ]
+        },
+        {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, '#b95451'],
+            [1, '#aa4643']
+          ]
+        },
+        {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, '#89a54e'],
+            [1, '#89a54e']
+          ]
+        }
+      ],
+      xAxis: {
+          categories: accounts_chart_data.categories,
+          title: {
+              text: accounts_chart_data.xAxisTitle,
+          }
+      },
+      yAxis: {
+          title: {
+              text: accounts_chart_data.yAxisTitle,
+          },
+          min: 0,
+          max: t,
+          tickInterval: t / 10
+      },
+      tooltip: {
+          formatter: function() {
+              return "<strong>" + this.x + "</strong><br>" + this.series.name + ": " + Highcharts.numberFormat(this.y, 0, ",", ".")
+          }
+      },
+      plotOptions: {
+          column: {
+              stacking: "normal",
+              dataLabels: {
+                  enabled: !0
+              },
+              pointPadding: .2,
+              borderWidth: 0
+          }
+      },
+      credits: {
+          text: "Painel da Revenda",
+          href: "",
+          style: {
+              display: "none"
+          }
+      },
+      series: accounts_chart_data.values
+  }));
+
+
+  $("#usage_chart").length > 0 && (t = (parseInt(Math.max.apply(null, usage_chart_data.values[0].data) / 100) + 1) * 100 || 1, e = new Highcharts.Chart({
+      chart: {
+          renderTo: "usage_chart",
+          type: "column"
+      },
+      title: {
+          text: "",
+          style: {
+              color: "#2a2a2a"
+          }
+      },
+      colors: [
+        {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, 'rgb(189, 170, 56)'],
+            [1, 'rgb(155, 131, 23)']
+          ]
+        },
+        {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, '#b95451'],
+            [1, '#aa4643']
+          ]
+        }
+      ],
+      xAxis: {
+          categories: usage_chart_data.categories,
+          title: {
+              text: usage_chart_data.xAxisTitle,
+              style: {
+                  color: "#2a2a2a"
+              }
+          }
+      },
+      yAxis: {
+          title: {
+              text: usage_chart_data.yAxisTitle,
+              style: {
+                  color: "#2a2a2a"
+              }
+          },
+          min: 0,
+          max: t,
+          tickInterval: t / 10
+      },
+      tooltip: {
+          formatter: function() {
+              return "<strong>" + this.x + "</strong><br>" + this.series.name + ": " + Highcharts.numberFormat(this.y, 0, ",", ".")
+          }
+      },
+      plotOptions: {
+          column: {
+              pointPadding: .2,
+              borderWidth: 0
+          }
+      },
+      credits: {
+          text: "Locaweb",
+          href: "",
+          style: {
+              display: "none"
+          }
+      },
+      series: usage_chart_data.values
+  }));
+
+
+  $("#messages_chart").length > 0 && (t = (parseInt(Math.max.apply(null, messages_chart_data.values[0].data) / 100) + 1) * 100 || 1, e = new Highcharts.Chart({
+      chart: {
+          renderTo: "messages_chart",
+          type: "column",
+          width: $("#usage_chart").width()
+      },
+      title: {
+          text: "",
+          style: {
+              color: "#2a2a2a"
+          }
+      },
+      colors: [
+      {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, 'rgb(189, 170, 56)'],
+            [1, 'rgb(155, 131, 23)']
+          ]
+        },
+        {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, '#b95451'],
+            [1, '#aa4643']
+          ]
+        },
+        {
+          linearGradient: [0,300,0,0],
+          stops:[
+            [0, '#89a54e'],
+            [1, '#89a54e']
+          ]
+        }
+      ],
+      xAxis: {
+          categories: messages_chart_data.categories,
+          title: {
+              text: messages_chart_data.xAxisTitle,
+          }
+      },
+      yAxis: {
+          title: {
+              text: messages_chart_data.yAxisTitle,
+          },
+          min: 0,
+          max: t,
+          tickInterval: t / 10
+      },
+      tooltip: {
+          formatter: function() {
+              return "<strong>" + this.x + "</strong><br>" + this.series.name + ": " + Highcharts.numberFormat(this.y, 0, ",", ".")
+          }
+      },
+      plotOptions: {
+          column: {
+              pointPadding: .2,
+              borderWidth: 0
+          }
+      },
+      credits: {
+          text: "Locaweb",
+          href: "",
+          style: {
+              display: "none"
+          }
+      },
+      series: messages_chart_data.values
+  }));
+
+  //New Client
+  $('#panel-charts-2-new').highcharts({
     chart: {
       type: 'column'
     },
@@ -48,8 +293,8 @@ $(function () {
       }
     },
     credits: {
-      text: 'Locaweb',
-      href: 'http://www.locaweb.com.br',
+      text: 'Painel da Revenda',
+      href: '',
       style: {
         display: 'none'
       }
@@ -58,185 +303,6 @@ $(function () {
     series: [{
       name: 'Total de envios contratados',
       data: [0, 0, 0, 0]
-    }]
-  });
-
-    $('#panel-charts-2-new').highcharts({
-      chart: {
-        type: 'column'
-      },
-      title: {
-        text: 'Setembro/2014'
-      },
-      xAxis: {
-        categories: ['Joana', 'Marcela', 'Patricia', 'Diego']
-      },
-      yAxis: {
-        min: 0,
-        title: {
-          text: 'Envios'
-        }
-      },
-      credits: {
-        text: 'Locaweb',
-        href: 'http://www.locaweb.com.br',
-        style: {
-          display: 'none'
-        }
-      },
-      colors: ['#bdaa38', '#aa4643 ','#89a54e'],
-      series: [{
-        name: 'Total de envios contratados',
-        data: [0, 0, 0, 0]
-      }]
-    });
-
-
-  $('#panel-charts-client').highcharts({
-
-    chart: {
-      type: 'column',
-      width: $('#panel-charts').width()
-    },
-    title: {
-      text: 'Agosto/2014'
-    },
-    xAxis: {
-      categories: ['29/04 a 28/05', '29/06 a 28/07', '29/08 a 28/09', '29/10 a 28/11']
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: 'Envios'
-      }
-    },
-    credits: {
-      text: 'Locaweb',
-      href: 'http://www.locaweb.com.br',
-      style: {
-        display: 'none'
-      }
-    },
-    colors: ['#bdaa38', '#aa4643 ','#89a54e'],
-    series: [{
-      name: 'Mensagens enviadas',
-      data: [30, 15, 30, 30],
-    },
-    {
-      name: 'Erros de recebimento',
-      data: [20, 12, 14, 22]
-    },
-    {
-      name: 'Descadastramentos',
-      data: [5, 1, 5, 10]
-    }]
-  });
-
-  // Panel 2
-  $('#panel-charts-2').highcharts({
-    chart: {
-      type: 'column'
-    },
-    title: {
-      text: 'Relatório'
-    },
-    xAxis: {
-      categories: ['00h', '01h', '02h', '03h', '04h']
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: 'Quantidade'
-      },
-      stackLabels: {
-        enabled: true,
-        style: {
-          fontWeight: 'bold',
-          color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-        }
-      }
-    },
-    legend: {
-      align: 'right',
-      x: 0,
-      verticalAlign: 'top',
-      y: 0,
-      floating: true,
-      backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-      borderColor: '#ccc',
-      borderWidth: 1,
-      shadow: false
-    },
-    plotOptions: {
-      column: {
-        stacking: 'normal',
-        dataLabels: {
-          enabled: false,
-          color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
-        }
-      }
-    },
-    credits: {
-      text: 'Locaweb',
-      href: 'http://www.locaweb.com.br',
-      style: {
-        display: 'none'
-      }
-    },
-    colors: ['#25b89a', '#aa4643 ','#89a54e'],
-    series: [{
-      name: 'envios',
-      data: [55, 50, 40, 25, 13]
-    },
-    {
-      name: 'erros',
-      data: [5, 5, 2, 10, 3]
-    }]
-  });
-
-  // Panel 2 Pie chart
-  $('#panel-chart-pie').highcharts({
-    chart: {
-      width: $('#panel-charts-2').width(),
-      plotBackgroundColor: null,
-      plotBorderWidth: 1,
-      plotShadow: false
-    },
-    title: {
-      text: ''
-    },
-    tooltip: {
-      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    colors: ['#25b89a', '#aa4643 ','#89a54e'],
-    plotOptions: {
-      pie: {
-        allowPointSelect: true,
-        cursor: 'pointer',
-        dataLabels: {
-          enabled: true,
-          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-          style: {
-            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-          }
-        }
-      }
-    },
-    credits: {
-      text: 'Locaweb',
-      href: 'http://www.locaweb.com.br',
-      style: {
-        display: 'none'
-      }
-    },
-    series: [{
-      type: 'pie',
-      name: 'Browser share',
-      data: [
-        ['Erro 1', 15.0],
-        ['Erro 2', 35.0],
-        ['Erro 3', 40.0]
-      ]
     }]
   });
 
