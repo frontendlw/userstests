@@ -275,6 +275,65 @@ $(function () {
       series: messages_chart_data.values
   }));
 
+
+
+  $("#chart").length > 0 && (t = (parseInt(Math.max.apply(null, chart_data.values) / 100) + 1) * 100 || 1, e = new Highcharts.Chart({
+      chart: {
+          renderTo: "chart",
+          type: "column"
+      },
+      title: {
+          text: chart_data.title,
+          style: {
+              color: "#2a2a2a"
+          }
+      },
+      colors: [{
+          linearGradient: [0, 300, 0, 0],
+          stops: [
+              [0, "rgb(189, 170, 56)"],
+              [1, "rgb(155, 131, 23)"]
+          ]
+      }],
+      xAxis: {
+          categories: chart_data.categories
+      },
+      yAxis: {
+          title: {
+              text: chart_data.yAxisTitle,
+              style: {
+                  color: "#2a2a2a"
+              }
+          },
+          min: 0,
+          max: t,
+          tickInterval: t / 10
+      },
+      tooltip: {
+          formatter: function() {
+              return "<strong>" + this.x + "</strong><br>" + this.series.name + ": " + Highcharts.numberFormat(this.y, 0, ",", ".")
+          }
+      },
+      plotOptions: {
+          column: {
+              pointPadding: .2,
+              borderWidth: 0
+          }
+      },
+      credits: {
+          text: "Painel da Revenda",
+          href: "",
+          style: {
+              display: "none"
+          }
+      },
+      series: [{
+          name: chart_data.legend,
+          data: chart_data.values
+      }]
+  }));
+
+
   //New Client
   $('#panel-charts-2-new').highcharts({
     chart: {

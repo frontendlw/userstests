@@ -61,7 +61,7 @@ title_product: Revenda do Email Marketing
 
 <h2 class="ls-title-3">Clientes que mais contrataram <a href="<%= base_url %>/documentacao/exemplos/painel1/<%= current_page.data.alias %>/stats" class="ls-btn ls-btn-sm ls-float-right ls-float-none-sm">Ver mais relatórios</a></h2>
 <div class="ls-box">
-  <div id="panel-charts"></div>
+  <div id="chart"></div>
 </div>
 
 <div class="row">
@@ -109,3 +109,11 @@ title_product: Revenda do Email Marketing
   </div>
 </div>
 
+<script type='text/javascript'>
+  var chart_data        = new Object;
+  chart_data.legend     = 'Total de envios contratados';
+  chart_data.title      = 'Setembro/2014';
+  chart_data.categories = ["Arnaldo Medeiros","Bruna Maia","Roberto Rodrigues Faria"];
+  chart_data.values     = [1000,300,220];
+  chart_data.yAxisTitle = 'Envios';
+</script>
