@@ -1,6 +1,6 @@
 $(function () {
 
-  // panel 1
+  // stats
   if ($('#panel-charts').length > 0){
 
     maximum_value = (parseInt(Math.max.apply(null, messages_chart_data.values[0].data) / 100) + 1) * 100 || 1
@@ -63,6 +63,7 @@ $(function () {
   }
 
 
+  // page stats
   var e, t;
   $("#panel-charts-client").length > 0 && (t = (parseInt(Math.max.apply(null, accounts_chart_data.values[0].data) / 10) + 1) * 10 || 1, e = new Highcharts.Chart({
       chart: {
@@ -135,7 +136,7 @@ $(function () {
       series: accounts_chart_data.values
   }));
 
-
+  // client internal
   $("#usage_chart").length > 0 && (t = (parseInt(Math.max.apply(null, usage_chart_data.values[0].data) / 100) + 1) * 100 || 1, e = new Highcharts.Chart({
       chart: {
           renderTo: "usage_chart",
@@ -143,9 +144,9 @@ $(function () {
       },
       title: {
           text: "",
-          style: {
-              color: "#2a2a2a"
-          }
+          // style: {
+          //     color: "#2a2a2a"
+          // }
       },
       colors: [
         {
@@ -167,17 +168,17 @@ $(function () {
           categories: usage_chart_data.categories,
           title: {
               text: usage_chart_data.xAxisTitle,
-              style: {
-                  color: "#2a2a2a"
-              }
+              // style: {
+              //     color: "#2a2a2a"
+              // }
           }
       },
       yAxis: {
           title: {
               text: usage_chart_data.yAxisTitle,
-              style: {
-                  color: "#2a2a2a"
-              }
+              // style: {
+              //     color: "#2a2a2a"
+              // }
           },
           min: 0,
           max: t,
@@ -205,11 +206,11 @@ $(function () {
   }));
 
 
+  // client internal
   $("#messages_chart").length > 0 && (t = (parseInt(Math.max.apply(null, messages_chart_data.values[0].data) / 100) + 1) * 100 || 1, e = new Highcharts.Chart({
       chart: {
           renderTo: "messages_chart",
-          type: "column",
-          width: $("#usage_chart").width()
+          type: "column"
       },
       title: {
           text: "",
@@ -276,7 +277,7 @@ $(function () {
   }));
 
 
-
+  //home
   $("#chart").length > 0 && (t = (parseInt(Math.max.apply(null, chart_data.values) / 100) + 1) * 100 || 1, e = new Highcharts.Chart({
       chart: {
           renderTo: "chart",

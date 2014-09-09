@@ -22,7 +22,8 @@ var lsexample = (function() {
   }
 
   function addLoose(){
-    $('#addLoose').on('click',function(){
+    $('#addMessage .ls-btn-primary').on('click',function(){
+      $('.ls-alert').hide();
       var inputLoose = $('#inputLoose').val();
       doSetItem();
       $('#addMessage').hide();
