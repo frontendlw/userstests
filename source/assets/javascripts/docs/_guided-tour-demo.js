@@ -569,50 +569,56 @@ tourGuiado = (function() {
 }());
 
 window.setTimeout(function(){
- var $body = $('body');
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_base_index')){
-   tourGuiado.firstTour();
-  }
+  var $body = $('body');
+  var alias = ['sp', 'bh', 'rj'];
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_home')){
-   tourGuiado.homeTour();
-  }
+  for (var prop in alias) {
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_clients')){
-   tourGuiado.clientTour();
-  }
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_home')){
+     tourGuiado.homeTour();
+    }
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_new-client')){
-   tourGuiado.registerClientTour();
-  }
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_clients')){
+     tourGuiado.clientTour();
+    }
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_client')){
-   tourGuiado.adminClientTour();
-  }
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_new-client')){
+     tourGuiado.registerClientTour();
+    }
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_stats')){
-   tourGuiado.statsTour();
-  }
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_client')){
+     tourGuiado.adminClientTour();
+    }
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_config-domain')){
-   tourGuiado.configDomainTour();
-  }
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_client_new')){
+     tourGuiado.adminClientTour();
+    }
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_config-email')){
-   tourGuiado.configEmailTour();
-  }
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_stats')){
+     tourGuiado.statsTour();
+    }
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_config-aspect')){
-   tourGuiado.configAspectTour();
-  }
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_config-domain')){
+     tourGuiado.configDomainTour();
+    }
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_config-answer')){
-   tourGuiado.configAnswerTour();
-  }
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_config-email')){
+     tourGuiado.configEmailTour();
+    }
 
-  if ($body.hasClass('documentacao_exemplos_painel1_sp_config-api')){
-   tourGuiado.configApiTour();
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_config-aspect')){
+     tourGuiado.configAspectTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_config-answer')){
+     tourGuiado.configAnswerTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel1_'+ alias[prop] +'_config-api')){
+     tourGuiado.configApiTour();
+    }
+
   }
 
 }, 1000)
