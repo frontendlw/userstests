@@ -155,7 +155,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#513335', end
 }
 
 .rev-color-selector {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 input.rev-color-selector:checked + .rev-label-color {
