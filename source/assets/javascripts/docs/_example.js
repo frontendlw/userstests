@@ -7,6 +7,7 @@ var lsexample = (function() {
     addLoose();
     doGetItem();
     doClear();
+    setCookie();
   }
 
   function activeMenu() {
@@ -49,8 +50,15 @@ var lsexample = (function() {
     })
   }
 
+  function setCookie(){
+    var url = window.location.hostname
+    var setCookie = $.cookie('cookie_tour', true);
+    var setPath = ($.cookie.defaults.path = url);
 
-
+    if( setCookie = true && setPath === url){
+      $('#ls-feedback-curtain').removeClass('ls-active');
+    }
+  }
 
   return {
     init:init
