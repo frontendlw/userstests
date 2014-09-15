@@ -9,7 +9,7 @@
   <meta name="keywords" content="<%= current_page.data.keywords %>" />
   <%= stylesheet_link_tag "panel" %>
 
-  <link href="http://assets.locaweb.com.br/locastyle/3.2.2/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
+  <link href="http://assets.locaweb.com.br/locastyle/<%= settings.stable %>/stylesheets/locastyle.css" rel="stylesheet" type="text/css">
 
 </head>
 <body class="<%= page_classes %>">
@@ -63,7 +63,7 @@
   </aside>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-  <script src="http://assets.locaweb.com.br/locastyle/3.2.2/javascripts/locastyle.js" type="text/javascript"></script>
+  <script src="http://assets.locaweb.com.br/locastyle/<%= settings.stable %>/javascripts/locastyle.js" type="text/javascript"></script>
 
    <%= javascript_include_tag "example", "//code.highcharts.com/highcharts.js", "docs/panel-charts" %>
 
