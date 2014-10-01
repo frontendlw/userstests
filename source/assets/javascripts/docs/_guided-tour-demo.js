@@ -621,4 +621,52 @@ window.setTimeout(function(){
 
   }
 
+  for (var prop in alias) {
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_home')){
+     tourGuiado.homeTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_clients')){
+     tourGuiado.clientTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_new-client')){
+     tourGuiado.registerClientTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_client')){
+     tourGuiado.adminClientTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_client_new')){
+     tourGuiado.adminClientTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_stats')){
+     tourGuiado.statsTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_config-domain')){
+     tourGuiado.configDomainTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_config-email')){
+     tourGuiado.configEmailTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_config-aspect')){
+     tourGuiado.configAspectTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_config-answer')){
+     tourGuiado.configAnswerTour();
+    }
+
+    if ($body.hasClass('documentacao_exemplos_painel2_'+ alias[prop] +'_config-api')){
+     tourGuiado.configApiTour();
+    }
+
+  }
+
 }, 1000)
