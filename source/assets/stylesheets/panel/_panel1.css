@@ -162,3 +162,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#513335', end
 input.rev-color-selector:checked + .rev-label-color {
   box-shadow: 0 0 0 2px #000;
 }
+.ls-topbar.ux-new-topbar .ls-brand-name:before{
+  content: "";
+  background: rgba(0,0,0,.2);
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 60px;
+}
+.ux-new-topbar .ls-brand-name a:before{
+
+  padding-right: 13px;
+
+}
+.ux-title-topbar{
+  display: inline-block;
+  font-size: 11px;
+}
+.ux-title-topbar span{
+  display: block;
+  font-size: 22px;
+}
