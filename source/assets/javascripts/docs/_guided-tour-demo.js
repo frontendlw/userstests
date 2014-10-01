@@ -27,7 +27,7 @@ tourGuiado = (function() {
         arrowOffset: 'center'
       },
       {
-        target: '.ls-ico-dashboard',
+        target: '.ls-main .ls-ico-dashboard',
         title: 'Consumo',
         content: 'Acompanhe o consumo dos envios do seu plano no período.',
         placement: 'top',
@@ -63,7 +63,7 @@ tourGuiado = (function() {
         content: 'Acesse nossos canais de ajuda.',
         placement: 'bottom',
         arrowOffset: 'center',
-        xOffset: -50,
+        xOffset: -90,
       },
       {
         target: '.ls-alerts-list',
@@ -71,7 +71,7 @@ tourGuiado = (function() {
         content: 'Fique à vontade para enviar sugestões e comentários.',
         placement: 'bottom',
         arrowOffset: 'center',
-        xOffset: -90,
+        xOffset: -130,
       }
     ]
   };
@@ -99,7 +99,7 @@ tourGuiado = (function() {
         arrowOffset: 'center'
       },
       {
-        target: '.ls-ico-dashboard',
+        target: '.ls-board-box .ls-ico-dashboard',
         title: 'Consumo',
         content: 'Acompanhe o consumo dos envios do seu plano no período.',
         placement: 'top',
@@ -140,7 +140,7 @@ tourGuiado = (function() {
         content: 'Acesse nossos canais de ajuda.',
         placement: 'bottom',
         arrowOffset: 'center',
-        xOffset: -50,
+        xOffset: -90,
       },
       {
         target: '.ls-alerts-list',
@@ -148,7 +148,7 @@ tourGuiado = (function() {
         content: 'Fique à vontade para enviar sugestões e comentários.',
         placement: 'bottom',
         arrowOffset: 'center',
-        xOffset: -90,
+        xOffset: -130,
       }
     ]
   };
