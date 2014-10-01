@@ -12,7 +12,7 @@ var lsexample = (function() {
 
   function activeMenu() {
     var $itemActive = $( '[href="' + window.location.pathname + '"]', '.ls-menu' );
-    $itemActive.parents('.ls-submenu').children('a').trigger('click');
+    $itemActive.parents('.ls-submenu').find('a').trigger('click');
     $itemActive.parent('li').addClass('ls-active');
   }
 
