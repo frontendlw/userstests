@@ -5,8 +5,8 @@
 
     <!-- Links de apoio -->
     <div class="ls-alerts-list">
-      <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
-      <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
+      <a href="#" class="ls-tooltip-bottom" aria-label="Sugestões" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span class="ls-ico-bullhorn"></span></a>
+      <a href="#" class="ls-tooltip-bottom" aria-label="Ajuda" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span class="ls-ico-question"></span></a>
     </div>
 
     <!-- Dropdown com detalhes da conta de usuário -->
@@ -30,11 +30,9 @@
 
   <!-- Nome do produto/marca -->
   <%- unless current_page.data.show_topbar_title %>
+   <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel"  aria-label="Voltar a lista de serviços" class=" ux-back ls-tooltip-right"><span class="ls-ico-chevron-left"></span></a>
     <h1 class="ls-brand-name">
-      <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel" class="ls-ico-envelope"></a>
-      <div class="ux-title-topbar">
-        CONTA
-        <span><%= current_page.data.user %></span>
+      <a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/<%= current_page.data.alias %>/home" class="ls-ico-envelope"><%=  current_page.data.title_product %></a>
     </h1>
   <% end %>
 </div>
@@ -47,8 +45,8 @@
 
     <!-- Links de apoio -->
     <div class="ls-alerts-list">
-      <a href="#" class="ls-ico-bullhorn" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span>Ajuda</span></a>
-      <a href="#" class="ls-ico-question" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span>Sugestões</span></a>
+      <a href="#" class="ls-tooltip-bottom" aria-label="Sugestões" data-ls-module="topbarCurtain" data-target="#ls-help-curtain"><span class="ls-ico-bullhorn"></span></a>
+      <a href="#" class="ls-tooltip-bottom" aria-label="Ajuda" data-ls-module="topbarCurtain" data-target="#ls-feedback-curtain"><span class="ls-ico-question"></span></a>
     </div>
 
     <!-- Dropdown com detalhes da conta de usuário -->
@@ -72,7 +70,7 @@
 
   <!-- Nome do produto/marca -->
   <%- unless current_page.data.show_topbar_title %>
-    <h1 class="ls-brand-name"><a href="<%= base_url %>/documentacao/exemplos/painel1/pre-painel" class="ls-ico-envelope"><%=  current_page.data.title_product %></a></h1>
+    <h1 class="ls-brand-name"><a href="<%= base_url %>/documentacao/exemplos/<%= current_page.data.panel %>/pre-painel" class="ls-ico-envelope"><%=  current_page.data.title_product %></a></h1>
   <% end %>
 </div>
 

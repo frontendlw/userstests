@@ -162,25 +162,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#513335', end
 input.rev-color-selector:checked + .rev-label-color {
   box-shadow: 0 0 0 2px #000;
 }
-.ls-topbar.ux-new-topbar .ls-brand-name:before{
-  content: "";
-  background: rgba(0,0,0,.2);
-  width: 1px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 60px;
-}
-.ux-new-topbar .ls-brand-name a:before{
-
-  padding-right: 13px;
-
-}
-.ux-title-topbar{
+.ux-back{
+  background: #907c0b;
+  border-right:1px solid  rgba(0,0,0,.2);
+  color: #fff;
   display: inline-block;
-  font-size: 11px;
+  vertical-align: top;
+  height: 60px;
+  line-height: 65px;
+  text-align: center;
+  font-size: 20px;
+  width: 60px;
 }
-.ux-title-topbar span{
-  display: block;
-  font-size: 22px;
+.ux-back:hover,
+.ux-back:focus{
+  background: #8a7813;
+}
+
+html.ls-theme-gold .ls-sidebar .ls-menu li a {
+  color: #bfbfbf;
+}
+html .ls-topbar .ls-notification-topbar .ls-alerts-list [class*="ls-ico"]{
+  width: 42px;
+  margin-right: 0
+}
+html .ls-tooltip-right:hover:before,
+html .ls-tooltip-right:focus:before{
+  top: 40%;
+}
+html .ls-tooltip-right:hover:after,
+html .ls-tooltip-right:focus:after{
+  top: 30%;
+}
+
+@media screen and (max-width: 767px){
+  .ux-back{
+    display: none;
+  }
 }
