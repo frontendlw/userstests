@@ -11,13 +11,16 @@ var lsexample = (function() {
   }
 
   function activeMenu() {
-    $('.ls-menu a').each(function(){
-      var path = window.location.pathname
-      var itemActive = $(this).attr('href');
-      if( itemActive == path ){
-        $(this).parent('li').addClass('ls-active');
-        $(this).parents('.ls-submenu').find('a').trigger('click');
-      };
+    var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
+
+    $(".ls-menu a").each(function () {
+        var href = $(this).attr('href');
+        if (path.substring(0, href.length) === href) {
+            $(this).closest('li').addClass('ls-active');
+            $(this).parents('.ls-submenu').find('a').trigger('click');
+        }
     });
   }
 
