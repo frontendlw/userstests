@@ -182,10 +182,15 @@ input.rev-color-selector:checked + .rev-label-color {
 html.ls-theme-gold .ls-sidebar .ls-menu li a {
   color: #bfbfbf;
 }
-html .ls-topbar .ls-notification-topbar .ls-alerts-list [class*="ls-ico"]{
-  width: 42px;
-  margin-right: 0
+.ls-alerts-list .ls-tooltip-bottom:hover:after,
+.ls-alerts-list .ls-tooltip-bottom:focus:after{
+  left: -30%;
 }
+.ls-alerts-list .ls-tooltip-bottom:hover:before,
+.ls-alerts-list .ls-tooltip-bottom:focus:before{
+  left: 5px;
+}
+
 html .ls-tooltip-right:hover:before,
 html .ls-tooltip-right:focus:before{
   top: 40%;
@@ -194,6 +199,11 @@ html .ls-tooltip-right:hover:after,
 html .ls-tooltip-right:focus:after{
   top: 30%;
 }
+.ls-alerts-list .ls-tooltip-bottom.ls-active:before,
+.ls-alerts-list .ls-tooltip-bottom.ls-active:after{
+  display: none;
+}
+
 
 @media screen and (max-width: 767px){
   .ux-back{
