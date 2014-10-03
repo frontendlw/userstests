@@ -11,9 +11,14 @@ var lsexample = (function() {
   }
 
   function activeMenu() {
-    var $itemActive = $( '[href="' + window.location.pathname + '"]', '.ls-menu' );
-    $itemActive.parents('.ls-submenu').find('a').trigger('click');
-    $itemActive.parent('li').addClass('ls-active');
+    $('.ls-menu a').each(function(){
+      var path = window.location.pathname
+      var itemActive = $(this).attr('href');
+      if( itemActive == path ){
+        $(this).parent('li').addClass('ls-active');
+        $(this).parents('.ls-submenu').find('a').trigger('click');
+      };
+    });
   }
 
   function disabledClient(){
